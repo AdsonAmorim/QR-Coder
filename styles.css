@@ -46,6 +46,7 @@ input::placeholder,button{
 
 .container .main #qr{
     width: 40rem;
+    max-width: 80%;
     height: 4rem;
     border-radius: .8rem;
     border: 1px solid #000;
