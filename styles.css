@@ -66,7 +66,7 @@ input::placeholder,button{
     filter: brightness(90%);
 }
 
-.container canvas{
+.container img{
     margin-top: 3.2rem;
     height: 30rem;
     width: 30rem;
@@ -78,4 +78,21 @@ input::placeholder,button{
 .container p{
     font-size: 2rem;
     margin-top: 1rem;
+}
+
+.container .sucess{
+    position:fixed;
+    top:2rem;
+    right: -20rem;
+    width: 16rem;
+    height: 5rem;
+    background-color:rgb(76, 218, 76);
+    border-radius: .4rem;
+    text-align: center;
+    transition: right 2s;
+}
+
+.container .sucess.active {
+    top:2rem;
+    right: 2rem;
 }

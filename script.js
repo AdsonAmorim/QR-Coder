@@ -3,24 +3,18 @@ let qr
     qr = new QRious({
         element:document.querySelector('#qrCode'),
         size:300,
-        value:""
+        value:"",
+        mime:"image/png"
     })
 })();
 
-const qrButton = document.querySelector('.qrButton')
+//real time
+const qrInput = document.querySelector('#qr')
 
-qrButton.addEventListener('click',()=>{
-    const qrText = document.querySelector("#qr").value
+qrInput.oninput = QrRealTime
+
+function QrRealTime(e){
     qr.set({
-        value:qrText
+        value:e.target.value
     })
-
-    if(qrText){
-        const qrSucess = document.querySelector('#qrSucess')
-        qrSucess.innerHTML = 'Código gerado com sucesso'
-        
-        const ocultName = setTimeout(()=>{
-            qrSucess.innerHTML=""
-        },2000) 
-    }
-})
+}
